@@ -2,7 +2,7 @@
 <h2 id="C-98标准："><a href="#C-98标准：" class="headerlink" title="C++98标准："></a>C++98标准：</h2><p>1、被static修饰的成员变量只能在类外的全局范围内进行定义与初始化，<strong><em>例外：</em></strong>被const和static同时修饰的成员变量也可以在类内进行初始化。<br>2、其余成员变量只能通过初始化列表或构造函数内的赋值操作进行初始化。<br><strong><em>注：</em></strong>因为被static修饰的成员变量为所有对象所共有，且单独保存在全局/静态数据域，所以在全局范围内进行定义与初始化既保证了变量的唯一性，又保证了变量的存储区域一致。而其他成员变量属于具体对象，不能通过类直接访问，且有可能保存在堆中或栈中，因此不能在类外进行定义与初始化。</p>
 <h2 id="C-11标准："><a href="#C-11标准：" class="headerlink" title="C++11标准："></a>C++11标准：</h2><p>1、被static修饰的成员变量只能在类外的全局范围内进行定义与初始化，<strong><em>例外：</em></strong>被const和static同时修饰的<strong>整型和枚举类型</strong>的成员变量也可以在类内进行初始化。<br>2、其余的成员变量可以直接在类内“初始化”。<strong><em>注：</em></strong>此处的“初始化”并非定义，可以理解为C++11提供的语法糖。</p>
 <h2 id="建议："><a href="#建议：" class="headerlink" title="建议："></a>建议：</h2><p>为了保证代码的正确性与规范性，在编程时应当：<br>1、被static修饰的成员变量均应在类外的全局范围内进行定义与初始化，以强调静态成员变量的唯一性与所在的区域（全局/静态数据域）。<br>2、其余变量均应在构造函数的初始化列表或函数体内进行初始化。</p>
-</div><!-- comment system--><div class="container"><hr></div></article><footer id="footer"><div class="container"><div class="bar"><div class="social"></div><div class="footer">© 2019-02 <a href="/" rel="nofollow">zhangbo</a></div><!--= '. Powered by '
+</div><!-- comment system--><div class="container"><hr></div></article><footer id="footer"><div class="container"><div class="bar"><div class="social"></div><div class="footer">© 2019-03 <a href="/" rel="nofollow">zhangbo</a></div><!--= '. Powered by '
 a(rel='nofollow', target='_blank', href='https://hexo.io') Hexo
 = '. Theme '
 a(target='_blank', href='https://github.com/lotabout/very-simple') very-simple
